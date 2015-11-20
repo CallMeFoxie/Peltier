@@ -11,7 +11,7 @@ import foxie.peltier.blocks.BlockReg;
 import foxie.peltier.items.ItemReg;
 import foxie.peltier.proxy.ProxyCommon;
 
-@Mod(modid = Peltier.MODID, name = Peltier.NAME, version = Peltier.VERSION, dependencies = "required-after:FoxieLib@[1.0,)")
+@Mod(modid = Peltier.MODID, name = Peltier.NAME, version = Peltier.VERSION, dependencies = "required-after:FoxieLib")
 public class Peltier implements IFoxieMod {
    public static final String MODID   = "peltier";
    public static final String NAME    = "Peltier";
@@ -24,9 +24,6 @@ public class Peltier implements IFoxieMod {
    public static Peltier INSTANCE;
 
    public static Config config;
-
-   public Peltier() {
-   }
 
    @Mod.EventHandler
    public void preinit(FMLPreInitializationEvent event) {

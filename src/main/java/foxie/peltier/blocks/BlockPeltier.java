@@ -1,5 +1,7 @@
 package foxie.peltier.blocks;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import foxie.lib.FoxyBlockTE;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockPistonBase;
@@ -32,6 +34,7 @@ public class BlockPeltier extends FoxyBlockTE {
    }
 
    @Override
+   @SideOnly(Side.CLIENT)
    public void registerBlockIcons(IIconRegister registrar) {
       iconSide = registerIcon(registrar, "side");
       iconHot = registerIcon(registrar, "hot");
