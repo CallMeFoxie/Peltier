@@ -1,0 +1,16 @@
+[
+{
+  "modid": "peltier",
+  "name": "Peltier",
+  "description": "Freeze or heat up things in-world!",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["CallMeFoxie"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
