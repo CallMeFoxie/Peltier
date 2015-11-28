@@ -6,13 +6,13 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import foxie.lib.Config;
-import foxie.lib.IFoxieMod;
+import foxie.lib.FoxieModBase;
 import foxie.peltier.blocks.BlockReg;
 import foxie.peltier.items.ItemReg;
 import foxie.peltier.proxy.ProxyCommon;
 
 @Mod(modid = Peltier.MODID, name = Peltier.NAME, version = Peltier.VERSION, dependencies = "required-after:FoxieLib")
-public class Peltier implements IFoxieMod {
+public class Peltier extends FoxieModBase {
    public static final String MODID   = "peltier";
    public static final String NAME    = "Peltier";
    public static final String VERSION = "@VERSION@";
@@ -23,11 +23,9 @@ public class Peltier implements IFoxieMod {
    @Mod.Instance(MODID)
    public static Peltier INSTANCE;
 
-   public static Config config;
-
    @Mod.EventHandler
    public void preinit(FMLPreInitializationEvent event) {
-      config = new Config(event.getSuggestedConfigurationFile().getAbsolutePath());
+      super.preinit(event);
       proxy.preinit(event);
       ItemReg.preinit();
       BlockReg.preinit();
@@ -35,6 +33,7 @@ public class Peltier implements IFoxieMod {
 
    @Mod.EventHandler
    public void init(FMLInitializationEvent event) {
+      super.init(event);
       proxy.init(event);
       ItemReg.init();
       BlockReg.init();
@@ -44,6 +43,7 @@ public class Peltier implements IFoxieMod {
 
    @Mod.EventHandler
    public void postinit(FMLPostInitializationEvent event) {
+      super.postinit(event);
       proxy.postinit(event);
       ItemReg.postinit();
       BlockReg.postinit();
