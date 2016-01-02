@@ -32,7 +32,7 @@ if (System.getenv("BUILD_NUMBER") != null) {
 }
 
 version = "${config.minecraft_version}-${config.mod_version}${VersionBuild}"
-group = "foxie.peltier"
+group = "foxie"
 archivesBaseName = "Peltier"
 
 minecraft {
@@ -53,6 +53,11 @@ repositories {
         name 'CB Repo'
         url "http://chickenbones.net/maven/"
     }
+    maven {
+        name "Foxiehost"
+        url "http://maven.foxiehost.eu"
+    }
+
 }
 
 dependencies {
@@ -60,6 +65,7 @@ dependencies {
     compile "codechicken:CodeChickenCore:1.7.10-1.0.7.46:dev"
     compile "codechicken:NotEnoughItems:1.7.10-1.0.5.110:dev"
     compile "mcp.mobius.waila:Waila:1.5.10_1.7.10"
+    compile "foxie:FoxieLib:1.7.10-1.0-8:deobf"
 }
 
 processResources
